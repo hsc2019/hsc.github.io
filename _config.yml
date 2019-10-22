@@ -1,13 +1,13 @@
-title:              Clean Blog
-email:              your-email@example.com
-description:        A Blog Theme by Start Bootstrap
-author:             Start Bootstrap
-baseurl:            "/startbootstrap-clean-blog-jekyll"
-url:                "https://blackrockdigital.github.io"
+title:              和风的博客
+email:              hiccphp@qq.com
+description:        Only love and music can not live up to
+author:             hiccphp
+baseurl:            ""
+url:                "https://hsc2019.github.io"
 
 # Social Profiles
 twitter_username:   SBootstrap
-github_username:    BlackrockDigital
+github_username:    hsc2019
 facebook_username:  StartBootstrap
 linkedin_username:
 
