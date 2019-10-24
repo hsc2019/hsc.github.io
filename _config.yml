@@ -28,7 +28,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
 
-# gitment settings
-comment_gitment_repo: hsc2019.github.io
-comment_gitment_clientId: 0914b5fe499f3065ab70
-comment_gitment_clientSecret: d0509245cf3d7d267bbe67877f6cecd4c274a36c
+# gitalk settings
+comment_gitalk_repo: hsc2019.github.io
+comment_gitalk_clientId: 0914b5fe499f3065ab70
+comment_gitalk_clientSecret: d0509245cf3d7d267bbe67877f6cecd4c274a36c

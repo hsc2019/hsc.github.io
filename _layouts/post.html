@@ -4,7 +4,8 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+<header class="masthead"
+  style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
   {% else %}
   <header class="masthead">
     {% endif %}
@@ -39,33 +40,39 @@ layout: default
         <div class="clearfix">
 
           {% if page.previous.url %}
-          <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-left"
+            href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip"
+            data-placement="top" title="{{ page.previous.title }}">&larr; Previous<span class="d-none d-md-inline">
               Post</span></a>
           {% endif %}
           {% if page.next.url %}
-          <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
+          <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"
+            data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span
+              class="d-none d-md-inline">
               Post</span> &rarr;</a>
           {% endif %}
 
         </div>
 
-        {% if site.comment_gitment_repo %}
-        <div id="gitmentContainer"></div>
-        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+        <!-- git talk -->
+        <div id="gitalk-container"></div>
+
+        <!-- 配置git talk样式 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+        <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
         <script>
-            var gitment = new Gitment({
-            id: '<%= page.date %>',
-                owner: '{{site.github_username}}',
-                repo: '{{site.comment_gitment_repo}}',
-                oauth: {
-                    client_id: '{{site.comment_gitment_clientId}}',
-                    client_secret: '{{site.comment_gitment_clientSecret}}',
-                },
-            });
-            gitment.render('gitmentContainer')
+          var gitalk = new Gitalk({
+            clientID: '{{site.comment_gitalk_clientId}}',
+            clientSecret: '{{site.comment_gitalk_clientSecret}}',
+            repo: '{{site.comment_gitalk_repo}}',
+            owner: '{{site.github_username}}',
+            admin: '{{site.github_username}}',
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: false  // Facebook-like distraction free mode
+          })
+
+          gitalk.render('gitalk-container')
         </script>
-        {% endif %}
       </div>
     </div>
   </div>
