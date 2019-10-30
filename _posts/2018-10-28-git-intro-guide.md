@@ -2,7 +2,7 @@
 title: Git 入门操作笔记总结
 date: 2018-10-28 10:14:39
 categories:
-- Git
+- 运维
 tags:
 - git
 ---

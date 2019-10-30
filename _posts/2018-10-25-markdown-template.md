@@ -2,7 +2,7 @@
 title: Markdown 文件编写指南
 date: 2018-10-25 10:14:39
 categories:
-- Markdown
+- 随笔
 tags:
 - markdown
 - blog

@@ -2,7 +2,7 @@
 title: Cmd Markdown 简明语法手册
 date: 2018-10-25 10:14:39
 categories:
-- Markdown
+- 随笔
 tags:
 - markdown
 - blog
